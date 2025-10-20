@@ -1,0 +1,103 @@
+.navbar-header {
+  background: #2d7a7a;
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(45, 122, 122, 0.2);
+}
+
+.navbar-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (min-width: 769px) {
+  .navbar-content {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    justify-content: flex-start;
+    padding: 0 1rem;
+  }
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggle:hover {
+  transform: scale(1.1);
+}
+
+.navbar-toggle:active {
+  transform: scale(0.95);
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.navbar-toggle:hover .hamburger {
+  background-color: #b3e0e0;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-header {
+    padding: 1rem 0.75rem;
+  }
+
+  .navbar-title {
+    font-size: 1.1rem;
+  }
+
+  .navbar-toggle {
+    width: 25px;
+    height: 25px;
+  }
+
+  .hamburger {
+    width: 20px;
+    height: 2px;
+  }
+}

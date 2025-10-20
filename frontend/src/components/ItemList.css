@@ -1,0 +1,125 @@
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.control-group label {
+  font-weight: 600;
+  color: #2d7a7a;
+}
+
+.control-group select,
+.control-group input {
+  border: 1px solid #b3e0e0;
+  background: #ffffff;
+  color: #2d7a7a;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  font-weight: 500;
+}
+
+.control-group select:focus,
+.control-group input:focus {
+  border-color: #2d7a7a;
+  box-shadow: 0 0 0 3px rgba(45, 122, 122, 0.15);
+}
+
+.control-group select option {
+  color: #2d7a7a;
+  background: #ffffff;
+  padding: 0.5rem;
+}
+
+.item-empty {
+  background: #e6fffa;
+  color: #2d7a7a;
+  border: 1px solid #b3e0e0;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.item-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.item-card {
+  background: #ffffff;
+  border: 1px solid #b3e0e0;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(45, 122, 122, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.item-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.item-title {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #2d7a7a;
+}
+
+.item-desc {
+  margin: 0;
+  color: #4a9a9a;
+  font-size: 0.95rem;
+}
+
+.item-meta {
+  display: flex;
+  justify-content: flex-end;
+  color: #4a9a9a;
+  font-size: 0.85rem;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.status.activo {
+  background: #b3e0e0;
+  color: #2d7a7a;
+  border: 1px solid #4a9a9a;
+}
+
+.status.inactivo {
+  background: #f7f8fa;
+  color: #718096;
+  border: 1px solid #cbd5e0;
+}
+
+@media (max-width: 640px) {
+  .item-controls {
+    grid-template-columns: 1fr;
+  }
+}
